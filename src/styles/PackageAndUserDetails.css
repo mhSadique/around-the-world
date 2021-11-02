@@ -1,0 +1,154 @@
+/* Package details */
+
+.package-user-details {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .package-user-details .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .package-user-details .inner-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+  
+  .package-user-details .package-details {
+  
+  }
+  
+  .package-user-details .package-details .heading {
+    font-size: 50px;
+    color: #103d40;
+    margin-bottom: 30px;
+  }
+  
+  .package-user-details .package-details .description {
+    font-size: 20px;
+    line-height: 30px;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+  
+  .package-user-details .package-details .inclusion-heading {
+    color: #103d40;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .package-user-details .package-details .inclusion {
+    list-style-position: inside;
+    margin-bottom: 30px;
+  }
+  
+  .package-user-details .package-details .inclusion li {
+    font-size: 20px;
+    line-height: 30px;
+    color: #666666;
+  }
+  
+  .package-user-details .package-details .explore-heading {
+    color: #103d40;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .package-user-details .package-details .explore {
+    list-style-position: inside;
+    margin-bottom: 30px;
+  }
+  
+  .package-user-details .package-details .explore li {
+    font-size: 20px;
+    line-height: 30px;
+    color: #666666;
+  }
+  
+  .package-user-details .package-details .conclusion {
+    font-size: 20px;
+    line-height: 30px;
+    color: #666666;
+  }
+  
+  
+  /* User details */
+  
+  .package-user-details .user-details {
+  }
+  
+  .package-user-details .user-details form {
+      background-color: #F1F1F1;
+      padding-top: 30px;
+      padding-bottom: 50px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+  
+  .package-user-details .user-details form label{
+      color: #1F7780;
+      text-transform: uppercase;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-weight: bold;
+  }
+  
+  .package-user-details .user-details form input{
+      margin-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      width: 490px;
+      padding: 10px 20px;
+      border: 1px solid #94B7BA;
+      border-radius: 5px;
+  }
+  
+  .package-user-details .user-details h4{
+      background-color: #54C9C2;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 30px;
+      color: white;
+      font-size: 22px;
+      letter-spacing: 1px;
+      font-weight: bold;
+  }
+  
+  .package-user-details form button {
+      background-color: #41c3bb;
+      border: none;
+      padding: 8px;
+      margin-left: 30px;
+      border-radius: 25px;
+      color: white;
+      width: 200px;
+      margin-top: 20px;
+      font-size: 18px;
+  }
+  
+  
+  @media (max-width: 767px) {
+      
+  .package-user-details .inner-container {
+      width: 95%;
+      display: grid;
+      grid-template-columns: 1fr;
+      column-gap: 60px;
+    }
+  
+    .package-user-details .package-details {
+        margin-bottom: 50px;
+    }
+  
+    
+  .package-user-details .user-details form input{
+      max-width: 350px;
+  }
+  }

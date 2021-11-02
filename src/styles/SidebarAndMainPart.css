@@ -1,0 +1,233 @@
+/* Sidebar */
+
+.main-part .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-part .inner-container {
+    margin-top: 60px;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 50px;
+}
+
+.main-part .sidebar-items-container {
+    margin-bottom: 60px;
+}
+
+.main-part .sidebar-items-container 
+.sidebar-item-heading:hover {
+    color: #41c3bb;
+}
+
+.main-part .sidebar-items-container 
+.sidebar-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #003333;
+}
+
+.main-part .sidebar-items-container 
+.sidebar-item-heading 
+.heading-text{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.main-part 
+.sidebar-item-single {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #41c3bb;
+}
+
+.main-part 
+.sidebar-item-single span{
+    font-weight: 300;
+}
+
+.main-part 
+.sidebar-item-single:hover {
+    color: #003333;
+}
+
+/* Main */
+
+.tour-spot-single-container {
+    background-color: #F1F1F1;
+    padding: 15px;
+    padding-bottom: 30px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: 1.5fr 2fr;
+    margin-bottom: 50px;
+}
+
+.tour-spot-single-container 
+.image img {
+    width: 100%;
+}
+
+.tour-spot-single-container 
+.text-area h2 {
+    font-size: 45px;
+    color: #003333;
+    margin-bottom: 20px;
+}
+
+.tour-spot-single-container 
+.text-area p {
+    font-size: 18px;
+    line-height: 25px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.tour-spot-single-container 
+.package-details-info {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-starting-station {
+    background-color: #FF5D75;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    margin-right: 20px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-starting-station span:first-child {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-starting-station span:last-child {
+    letter-spacing: 2px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-cost {
+    margin-right: 20px;
+    padding-right: 15px;
+    border-right: 0.5px solid #66666644;
+    color: #FF5D75; 
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-cost span:first-child {
+    font-size: 30px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-cost 
+.person-amount {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+.tour-spot-single-container 
+.package-details-info
+.package-duration {
+    margin-right: 20px;
+    padding-right: 15px;
+    border-right: 0.5px solid #66666644;
+    color: #FF5D75; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tour-spot-single-container 
+.package-details-info
+.package-duration
+.package-duration-day {
+    font-size: 30px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-duration
+.duration-amount {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-people{
+    color: #FF5D75; 
+    display: flex;
+    flex-direction: column;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-people-amount{
+    font-size: 30px;
+}
+
+.tour-spot-single-container 
+.package-details-info
+.package-people
+.people-amount{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.tour-spot-single-container
+.text-area button {
+    background-color: #41c3bb;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .main-part
+    .inner-container aside {
+        display: none;
+    }
+
+    .main-part .inner-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .tour-spot-single-container {
+        grid-template-columns: 1fr;
+    }
+
+    .package-details-info {
+        justify-content: center;
+        align-items: center;
+    }
+}

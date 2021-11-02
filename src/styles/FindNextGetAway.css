@@ -1,0 +1,54 @@
+.next-getaway {
+    margin-bottom: 30px;
+  }
+  
+  .next-getaway h2 {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+  
+  .next-getaway .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next-getaway .inner-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .inner-container .get-away-spot-single img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .inner-container .get-away-spot-single h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  .inner-container .get-away-spot-single p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  @media (max-width: 767px) {
+    .next-getaway .inner-container {
+      width: 95%;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  
+    .next-getaway h2 {
+      text-align: center;
+      width: 95%;
+    }
+  }
+  

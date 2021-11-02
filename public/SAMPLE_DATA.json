@@ -1,0 +1,30 @@
+[
+  {
+    "packageKey": 1,
+    "packageName": "Vivamus tortor.",
+    "packageTitle": "Title Title Title Title Title",
+    "packageImage": "http://dummyimage.com/246x100.png/cc0000/ffffff",
+    "packageDescription": "Turn your Hawaiian dreams into reality! This vacation will place you i paradise for",
+    "packageAirport": "Biodex",
+    "numberOfNight": 32,
+    "packagePrice": 73,
+    "packagePeopleIncluded": 80,
+    "packageFeatureInclusion": ["feature 1", "feature 2", "feature 3"],
+    "packageWaysToExplore": ["way 1", "way 2", "way 3"],
+    "packageSummary": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
+  },
+  {
+    "packageKey": 2,
+    "packageName": "Vivamus tortor.",
+    "packageTitle": "Title Title Title Title Title",
+    "packageImage": "http://dummyimage.com/246x100.png/cc0000/ffffff",
+    "packageDescription": "In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+    "packageAirport": "Biodex",
+    "numberOfNight": 32,
+    "packagePrice": 73,
+    "packagePeopleIncluded": 80,
+    "packageFeatureInclusion": ["feature 1", "feature 2", "feature 3"],
+    "packageWaysToExplore": ["way 1", "way 2", "way 3"],
+    "packageSummary": "Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue."
+  }
+]

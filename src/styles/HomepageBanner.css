@@ -1,0 +1,69 @@
+.banner {
+    width: 100%;
+    background-image: url("../assets/images/banner-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  
+  .banner .inner-container {
+      width: 100%;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgba(13, 189, 243, 0.247);
+      padding-left: 50px;
+    
+  }
+  
+  .banner .inner-container h2 {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  .banner .inner-container .reviews {
+    font-size: 20px;
+    color: white;
+  }
+  
+  .banner-rating .fa-star {
+    color: yellow;
+    font-size: 20px;
+  }
+  
+  
+  /* Media Queries */
+  @media (max-width: 767px) {
+    .banner {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    
+    .banner .inner-container {
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        backdrop-filter: blur(2px);
+        background-color: rgba(238, 226, 226, 0.1);
+        padding-left: 20px;
+      
+    }
+    
+    .banner .inner-container h2 {
+      font-size: 35px;
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    .banner .inner-container .reviews {
+      font-size: 17px;
+    }
+    
+  }
+  

@@ -1,0 +1,78 @@
+.spots-near h2 {
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.spots-near .outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spots-near .inner-container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.spots-near .spot-single {
+    border-radius: 20px;
+    height: 350px;
+    /* background-image: url('../../assets/image/image.webp'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.spots-near .spot-single button {
+    background-color: #B18667;
+    padding: 15px 60px;
+    margin-bottom: 40px;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+.spots-near .spot-single.spot-single-1 button {
+    background-color: #B18667;
+}
+
+.spots-near .spot-single.spot-single-2 button {
+    background-color: #17807D;
+}
+
+.spots-near .spot-single.spot-single-3 button {
+    background-color: #808063;
+}
+
+.spots-near .spot-single.spot-single-4 button {
+    background-color: #97A3A2;
+}
+
+.spots-near .spot-single.spot-single-5 button {
+    background-color: #AFC35A;
+}
+
+.spots-near .spot-single.spot-single-6 button {
+    background-color: #C0A583;
+}
+
+@media (max-width: 767px) {
+    .spots-near .inner-container {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .spots-near h2 {
+        width: 95%;
+        text-align: center;
+    }
+}
