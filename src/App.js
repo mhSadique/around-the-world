@@ -38,7 +38,7 @@ function App() {
                 <ManageAllOrders />
               </PrivateRoute>
 
-              <PrivateRoute path='/place-order/:key'>
+              <PrivateRoute path='/place-order/:id'>
                 <PlaceOrder />
               </PrivateRoute>
 

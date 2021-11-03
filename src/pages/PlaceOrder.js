@@ -5,17 +5,19 @@ import PackageAndUserDetails from '../components/PackageAndUserDetails';
 
 const PlaceOrder = () => {
     const [packageDetails, setPackageDetails] = useState({});
-    const {key} = useParams();
+    const {id} = useParams();
 
     useEffect(() => {
-        fetch('https://shielded-ridge-55542.herokuapp.com')
+        fetch('https://morning-atoll-31754.herokuapp.com')
         .then(res => res.json())
         .then(data => {
             console.log(data, 'from placeorder');
-            const orderedPackage = data.find(pckg => pckg.packageKey === +key);
+            const orderedPackage = data.find(pckg => pckg._id === id);
             setPackageDetails(orderedPackage);
         })
-    }, [key])
+    }, [id])
+
+    console.log(packageDetails);
 
     return (
         <>

@@ -1,6 +1,12 @@
 import React, { useContext, useRef } from 'react';
 import '../styles/Login.css';
-import { GoogleAuthProvider, getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { 
+    GoogleAuthProvider, 
+    getAuth, 
+    signInWithPopup, 
+    createUserWithEmailAndPassword, 
+    signInWithEmailAndPassword 
+} from "firebase/auth";
 import firebaseInit from '../Firebase/firebase.init';
 import { UserData } from '../Contexts/UserInfoContext';
 import { useHistory, useLocation } from 'react-router';
@@ -28,6 +34,7 @@ const Login = () => {
                 console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
+                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
                 history.push(redirectUri);
             })
     };
@@ -41,6 +48,7 @@ const Login = () => {
                 console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
+                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
                 history.push(redirectUri);
             })
             .catch(err => {
@@ -58,10 +66,11 @@ const Login = () => {
                 console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
+                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
                 history.push(redirectUri);
             })
             .catch(err => {
-                console.log(err);
+                alert("Such user does not exist! Please login with a valid account.")
             })
         e.preventDefault();
     };

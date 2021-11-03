@@ -31,9 +31,7 @@ const UserDetails = ({ packageDetails }) => {
             orderStatus: 'pending'
         };
         
-        // fetch('http://localhost:5000/save-order-details', {
-
-            fetch('https://shielded-ridge-55542.herokuapp.com/save-order-details', {
+            fetch('https://morning-atoll-31754.herokuapp.com/save-order-details', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

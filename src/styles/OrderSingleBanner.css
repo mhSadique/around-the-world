@@ -1,6 +1,6 @@
 .single-package {
-    background-image: url("../assets/images/banner-image.jpg");
-    height: 80vh;
+    /* background-image: url("../assets/images/banner-image.jpg"); */
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

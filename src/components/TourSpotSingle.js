@@ -5,13 +5,13 @@ const TourSpotSingle = ({packageSingle}) => {
     // console.log(packageSingle);
     const history = useHistory();
 
-    const handleExplore = (key) => {
-        history.push(`/place-order/${key}`);
+    const handleExplore = (id) => {
+        history.push(`/place-order/${id}`);
     };
     return (
         <div className="tour-spot-single-container">
             <div className="image">
-                <img src="https://i.ibb.co/wRzYNLZ/Surgery.jpg" alt=""/>
+                <img src={packageSingle.packageImage} alt=""/>
             </div>
             <div className="text-area">
                 <h2>{packageSingle.packageName}</h2>
@@ -34,7 +34,8 @@ const TourSpotSingle = ({packageSingle}) => {
                         <span className="people-amount">PEOPLE</span>
                     </div>
                 </div>
-                <button onClick={() => handleExplore(packageSingle.packageKey)} >Explore</button>
+                {/* <button onClick={() => handleExplore(packageSingle.packageKey)} >Explore</button> */}
+                <button onClick={() => handleExplore(packageSingle._id)} >Explore</button>
             </div>
         </div>
     );

@@ -10,7 +10,8 @@ const MainPart = () => {
             <div className="tour-spots-container">
                 {allPackages
                     .map(packageSingle => <TourSpotSingle
-                        key={packageSingle.packageKey}
+                        // key={packageSingle.packageKey}
+                        key={packageSingle._id}
                         packageSingle={packageSingle}
                     />)}
             </div>

@@ -10,12 +10,12 @@ const auth = getAuth();
 const Navigation = () => {
     useCheckUserLoggedInAfterPageRefresh();
     const { user, loggedIn, setLoggedIn, setUser } = useContext(UserData);
-    console.log(user);
 
     const handleLogout = () => {
         signOut(auth).then(() => {
             setLoggedIn(false);
             setUser({});
+            window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: false}));
 
         }).catch((error) => {
             console.log(error);

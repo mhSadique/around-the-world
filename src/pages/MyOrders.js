@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order-by-email/${user.email}`)
+        fetch(`https://morning-atoll-31754.herokuapp.com/order-by-email/${user.email}`)
             .then(response => response.json())
             .then(data => setMyOrders(data))
     }, [user.email]);
@@ -20,7 +20,15 @@ const MyOrders = () => {
                 <div className="inner-container">
                     <h2>My orders</h2>
                     <div className="order-single-container">
-                        {myOrders.map(order => <MyOrderSingle order={order} key={order._id} />)}
+                        {myOrders.length ?
+                            myOrders.map(order =>
+                                <MyOrderSingle
+                                    order={order}
+                                    key={order._id}
+                                    setMyOrders={setMyOrders}
+                                    user={user}
+                                />) :
+                            <p className="no-order-yet">You haven't made any order yet! Book a package soon before they are all booked.</p>}
                     </div>
                 </div>
             </div>

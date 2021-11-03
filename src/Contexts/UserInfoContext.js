@@ -7,8 +7,9 @@ const UserData = createContext();
 const UserInfoContext = ({children}) => {
     const [user, setUser] = useState({});
     const [loggedIn, setLoggedIn] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const userInfo = {user, setUser, loggedIn, setLoggedIn, loading, setLoading};
+
 
     return (
         <UserData.Provider value={userInfo}>
