@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router';
 
 const TourSpotSingle = ({packageSingle}) => {
-    // console.log(packageSingle);
     const history = useHistory();
 
     const handleExplore = (id) => {
@@ -34,7 +33,6 @@ const TourSpotSingle = ({packageSingle}) => {
                         <span className="people-amount">PEOPLE</span>
                     </div>
                 </div>
-                {/* <button onClick={() => handleExplore(packageSingle.packageKey)} >Explore</button> */}
                 <button onClick={() => handleExplore(packageSingle._id)} >Explore</button>
             </div>
         </div>

@@ -4,8 +4,6 @@ import '../styles/OrderSingleBanner.css';
 const OrderSingleBanner = ({packageDetails}) => {
     const style = {backgroundImage: `url(${packageDetails.packageImage})`};
 
-    console.log(packageDetails);
-    
     return (
         <section className="single-package" style={style}>
         <div className="outermost-container">

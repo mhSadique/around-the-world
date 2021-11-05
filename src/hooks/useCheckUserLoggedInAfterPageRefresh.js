@@ -13,7 +13,7 @@ const useCheckUserLoggedInAfterPageRefresh = () => {
             setLoggedIn(true);
             setLoading(false);
         } else {
-          console.log('user is signed out');
+          // console.log('user is signed out');
           // setLoading(true);
         }
       });

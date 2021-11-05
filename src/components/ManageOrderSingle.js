@@ -4,11 +4,8 @@ const ManageOrderSingle = ({ order, setOrders }) => {
     const [orderSingle, setOrderSingle] = useState(order);
     const [orderedPackage, setOrderedPackage] = useState({});
 
-    console.log(orderSingle);
 
     const approveOrder = () => {
-
-
         // update the order status to 'approved'
         fetch(`https://morning-atoll-31754.herokuapp.com/approve-order/${orderSingle._id}`, {
             method: 'PUT',

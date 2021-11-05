@@ -13,9 +13,6 @@ const MyOrderSingle = ({order, setMyOrders, user}) => {
         }
     }, [order.packageId]);
 
-    console.log(user.email);
-    console.log(orderSingle);
-
     const cancelOrder = () => {
         const proceed = window.confirm('Are you sure you want to cancel the order?');
         if (proceed) {

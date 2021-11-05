@@ -1,11 +1,11 @@
 import React, { useContext, useRef } from 'react';
 import '../styles/Login.css';
-import { 
-    GoogleAuthProvider, 
-    getAuth, 
-    signInWithPopup, 
-    createUserWithEmailAndPassword, 
-    signInWithEmailAndPassword 
+import {
+    GoogleAuthProvider,
+    getAuth,
+    signInWithPopup,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword
 } from "firebase/auth";
 import firebaseInit from '../Firebase/firebase.init';
 import { UserData } from '../Contexts/UserInfoContext';
@@ -31,13 +31,16 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
-                console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
                 window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
                 history.push(redirectUri);
             })
+            .catch(err => {
+                console.log(err);
+            })
     };
+
 
     const handleRegistration = (e) => {
         const email = emailRefReg.current.value;
@@ -45,10 +48,9 @@ const Login = () => {
         console.log(email, password);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
-                console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
-                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
+                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({ loggedIn: true }));
                 history.push(redirectUri);
             })
             .catch(err => {
@@ -63,10 +65,9 @@ const Login = () => {
         console.log(email, password);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
-                console.log(result.user);
                 setLoggedIn(true);
                 setUser(result.user);
-                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: true}));
+                window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({ loggedIn: true }));
                 history.push(redirectUri);
             })
             .catch(err => {
@@ -97,8 +98,8 @@ const Login = () => {
                     <input type="password" name="" id="pass" placeholder="Password" ref={passwordRefLogin} />
                     <br />
                     <button type="submit">Login</button>
-                    <button onClick={handleGoogleSignIn}>Login with Google</button>
                 </form>
+                    <button onClick={handleGoogleSignIn}>Login with Google</button>
             </div>
         </div>
     );

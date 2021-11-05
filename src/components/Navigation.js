@@ -16,6 +16,7 @@ const Navigation = () => {
             setLoggedIn(false);
             setUser({});
             window.localStorage.setItem('around_the_world_is_user_loggedIn', JSON.stringify({loggedIn: false}));
+            alert('You have logged out.')
 
         }).catch((error) => {
             console.log(error);
@@ -35,9 +36,10 @@ const Navigation = () => {
                         {loggedIn && <Link to='/my-orders'>My Orders</Link>}
                         {loggedIn && <Link to='/manage-orders'>Manage Orders</Link>}
                         {loggedIn && <Link to='/add-new-spot'>Add New Tourist Spot</Link>}
-                        {loggedIn || <Link to='/login'>Login</Link>}
+                        {loggedIn || <Link to='/login'>Register/Login</Link>}
                         {loggedIn && <Link to=''><button onClick={handleLogout} >Logout</button></Link>}
                         {user.displayName && <Link className="user-name" to=''>{user.displayName}</Link>}
+                        {user.photoURL && <Link to=''><img src={user.photoURL} alt=""/></Link>}
                     </div>
 
                 </div>

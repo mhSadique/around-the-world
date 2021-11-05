@@ -6,7 +6,12 @@ const PrivateRoute = ({ children, ...rest }) => {
     let userLoggedIn;
     const userLoggedinStatus = window.localStorage.getItem('around_the_world_is_user_loggedIn');
     const userLoggedinStatusParsed = JSON.parse(userLoggedinStatus);
-    userLoggedIn = userLoggedinStatusParsed.loggedIn;
+
+    if (userLoggedinStatus == null) {
+        userLoggedIn = false;
+    } else {
+        userLoggedIn = userLoggedinStatusParsed.loggedIn;
+    }
 
     return (
         <Route
