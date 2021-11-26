@@ -24,6 +24,7 @@ async function run() {
             const cursor = packageCollection.find({});
             const packages = await cursor.toArray();
             res.send(packages);
+            console.log('hit');
         })
 
         // POST API (save a single order from user)
@@ -71,7 +72,7 @@ async function run() {
             res.send(JSON.stringify(result));
         })
 
-        // GET API (get a single product found by id from the packages)
+        // GET API (get a single package found by id from the packages)
         app.get('/ordered-package-by-id/:id', async(req, res) => {
             const id = req.params.id;
             // console.log('got your id : ', id);
