@@ -28,6 +28,7 @@ const Login = () => {
     const history = useHistory();
     const redirectUri = location.state?.from || '/';
 
+    // log in with google account is 
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
@@ -99,7 +100,7 @@ const Login = () => {
                     <br />
                     <button type="submit">Login</button>
                 </form>
-                    <button onClick={handleGoogleSignIn}>Login with Google</button>
+                    {/* <button onClick={handleGoogleSignIn}>Login with Google</button> */}
             </div>
         </div>
     );

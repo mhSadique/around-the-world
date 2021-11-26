@@ -9,7 +9,7 @@ const MainPart = () => {
     if (allPackages.length) {
         return (
             <main>
-                <div className="tour-spots-container">
+                <div className="">
                     {allPackages
                         .map(packageSingle => <TourSpotSingle
                             key={packageSingle._id}

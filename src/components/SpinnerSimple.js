@@ -1,20 +1,23 @@
 import React from 'react';
 import spinner from '../assets/images/Spinner-transparent.gif';
 
-const Spinner = () => {
+const SpinnerSimple = () => {
     return (
         <div style={{
-            width: '100vw',
-            height: '100vh',
+            width: '20px',
+            height: '20px',
             fontSize: '50px',
             textAlign: 'center',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center'
+            alignItems: 'center', 
+            marginBottom: '50px',
+            marginTop: '50px'
+            
         }}>
             <img src={spinner} alt="" />
         </div>
     );
 };
 
-export default Spinner;
+export default SpinnerSimple;

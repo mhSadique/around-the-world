@@ -1,7 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import SpinnerSimple from './SpinnerSimple';
 
 const MyOrderSingle = ({order, setMyOrders, user}) => {
     const [orderSingle, setOrderSingle] = useState({});
+
+    console.log(orderSingle);
 
     useEffect(() => {
         if (order.packageId) {
@@ -40,12 +43,17 @@ const MyOrderSingle = ({order, setMyOrders, user}) => {
         }
     };
     
-    return (
-        <div className="order-single">
-            <p>{orderSingle.packageName}</p>
-            <button onClick={cancelOrder}>Cancel your order</button>
-        </div>
-    );
+    if (orderSingle._id) {
+        return (
+            <div className="order-single">
+                <p>{orderSingle.packageName}</p>
+                <button onClick={cancelOrder}>Cancel your order</button>
+            </div>
+        );
+    } 
+    else {
+        return <SpinnerSimple />;
+    }
 };
 
 export default MyOrderSingle;

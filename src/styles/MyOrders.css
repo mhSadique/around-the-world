@@ -82,5 +82,10 @@
     .orders .order-single-container .order-single p {
       margin-bottom: 20px;
     }
+
+    .orders .no-order-yet {
+      width: 90%;
+      text-align: center;
+    }
   }
   
